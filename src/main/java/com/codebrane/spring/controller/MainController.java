@@ -15,14 +15,14 @@ import java.util.Locale;
 public class MainController {
 	private SessionLocaleResolver localeResolver = null;
 
-	// http://localhost:8080/spring-template-1.0.0/en/
+	// http://localhost:8080/spring-template/en/
 	@RequestMapping("/{locale}/")
 	public String root(@PathVariable String locale, HttpServletRequest request, HttpServletResponse response) {
 		localeResolver.setLocale(request, response, new Locale(locale));
 		return "jsp/root";
 	}
 
-	// http://localhost:8080/spring-template-1.0.0/en//modeltest?firstAttributeValue=123&secondAttributeValue=abc
+	// http://localhost:8080/spring-template/en/modeltest?firstAttributeValue=123&secondAttributeValue=abc
 	@RequestMapping(value = "/{locale}/modeltest", method = RequestMethod.GET)
 	public String doModelTest(@PathVariable String locale,
 													  @RequestParam("firstAttributeValue") String firstAttributeValue,
