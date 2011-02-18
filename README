@@ -21,8 +21,8 @@ with-logging - The master web application but with log4j logging added to the
                controller.
 with-localisation - The master web application localised using the URL:
                     http://localhost:8080/spring-template-1.0.0/en/
-										http://localhost:8080/spring-template-1.0.0/gd/
-										Contains English (UK) and Scottish Gaelic strings.
+ 		    http://localhost:8080/spring-template-1.0.0/gd/
+		    Contains English (UK) and Scottish Gaelic strings.
 file-upload - The master web application with file upload functionality
 
 More info
