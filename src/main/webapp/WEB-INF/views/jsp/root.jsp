@@ -1,10 +1,11 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 <html>
 <head>
 	<title>${pageContext.servletContext.contextPath}/root</title>
 </head>
 <body>
 	<p>
-		Welcome to the Spring Minimal Web Application!
+		<fmt:message key="root.text"/>
 	</p>
 </body>
 </html>
