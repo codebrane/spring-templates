@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MainController {
 
-	// http://localhost:8080/spring-template-1.0.0
+	// http://localhost:8080/spring-template
 	@RequestMapping("/")
 	public String root() {
 		return "jsp/root";
 	}
 
-	// http://localhost:8080/spring-template-1.0.0/modeltest?firstAttributeValue=123&secondAttributeValue=abc
+	// http://localhost:8080/spring-template/modeltest?firstAttributeValue=123&secondAttributeValue=abc
 	@RequestMapping(value = "/modeltest", method = RequestMethod.GET)
 	public String doModelTest(@RequestParam("firstAttributeValue") String firstAttributeValue,
 													  @RequestParam("secondAttributeValue") String secondAttributeValue,
