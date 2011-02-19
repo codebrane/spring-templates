@@ -32,6 +32,7 @@ with-localisation - The master web application localised using the URL:
                     http://localhost:8080/spring-template-1.0.0/gd/
                     Contains English (UK) and Scottish Gaelic strings.
 file-upload - The master web application with file upload functionality
+interceptor - The master web application with interceptor functionality
 
 More info
 ---------
