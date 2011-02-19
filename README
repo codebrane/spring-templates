@@ -17,7 +17,7 @@ Running the templates
 You can see the templates in action by running Jetty:
 mvn jetty:run
 and pointing your browser to:
-http://localhost:8080/spring-templates
+http://localhost:8080/spring-template
 
 Templates
 ---------
@@ -28,11 +28,14 @@ master - Simple web application with two views. A simple view and one that
 with-logging - The master web application but with log4j logging added to the
                controller.
 with-localisation - The master web application localised using the URL:
-                    http://localhost:8080/spring-template-1.0.0/en/
-                    http://localhost:8080/spring-template-1.0.0/gd/
+                    http://localhost:8080/spring-template/en/
+                    http://localhost:8080/spring-template/gd/
                     Contains English (UK) and Scottish Gaelic strings.
 file-upload - The master web application with file upload functionality
 interceptor - The master web application with interceptor functionality
+sso - The master web application with a dummy servlet filter that injects
+      attributes into the request following a dummy login page.
+      This mimics Shibboleth or SAML2 SSO flow
 
 More info
 ---------
