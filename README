@@ -36,6 +36,7 @@ interceptor - The master web application with interceptor functionality
 sso - The master web application with a dummy servlet filter that injects
       attributes into the request following a dummy login page.
       This mimics Shibboleth or SAML2 SSO flow
+testing - The master web application with unit and integration tests
 
 More info
 ---------
