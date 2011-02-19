@@ -1,7 +1,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-	<title>${pageContext.servletContext.contextPath}/modeltest</title>
+	<title>Spring Template : Testing : modeltest</title>
 </head>
 <body>
 	<p>

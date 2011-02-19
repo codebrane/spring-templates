@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>${pageContext.servletContext.contextPath}/root</title>
+	<title>Spring Template : Testing : root</title>
 </head>
 <body>
 	<p>
