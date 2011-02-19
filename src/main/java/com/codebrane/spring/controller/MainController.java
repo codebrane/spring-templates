@@ -24,4 +24,13 @@ public class MainController {
 		model.addAttribute("secondAttributeName", secondAttributeValue);
 		return "jsp/modeltest";
 	}
+	
+	/* http://localhost:8080/spring-template/protected
+	 * By the time we get here, the SSO Filter will have
+	 * injected dummy attributes into the request headers
+	 */
+	@RequestMapping("/protected")
+	public String doProtected() {
+		return "jsp/protected";
+	}
 }
