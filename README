@@ -14,7 +14,7 @@ Running the template
 You can see the template in action by running Jetty:
 mvn jetty:run
 and pointing your browser to:
-http://localhost:8080/spring-templates
+http://localhost:8080/spring-template
 
 More info
 ---------
