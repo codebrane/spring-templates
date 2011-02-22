@@ -10,7 +10,7 @@
 	</p>
 	
 	<p>
-		The file named <c:out value="${uploadedFileName}" /> was uploaded!
+		The file named <c:out value="${uploadedFileName}" /> of type <c:out value="${contentType}" /> was uploaded!
 	</p>  
 	
 </body>

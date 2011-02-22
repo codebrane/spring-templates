@@ -39,6 +39,7 @@ public class MainController {
 			File uploadedFile = new File("/tmp/" + file.getOriginalFilename());
 			file.transferTo(uploadedFile);
 			model.addAttribute("uploadedFileName", file.getOriginalFilename());
+			model.addAttribute("contentType", file.getContentType());
     }
     catch(Exception e) {
 			model.addAttribute("error", e.getMessage());
