@@ -7,12 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+import org.springframework.beans.factory.annotation.Autowired;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Locale;
 
 @Controller
 public class MainController {
+	@Autowired
 	private SessionLocaleResolver localeResolver = null;
 
 	// http://localhost:8080/spring-template/en/
@@ -33,9 +35,5 @@ public class MainController {
 		model.addAttribute("firstAttributeName", firstAttributeValue);
 		model.addAttribute("secondAttributeName", secondAttributeValue);
 		return "jsp/modeltest";
-	}
-	
-	public void setLocaleResolver(SessionLocaleResolver localeResolver) {
-		this.localeResolver = localeResolver;
 	}
 }
