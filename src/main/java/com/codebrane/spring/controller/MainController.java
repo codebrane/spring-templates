@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Locale;
@@ -16,6 +17,8 @@ import java.util.Locale;
 public class MainController {
 	@Autowired
 	private SessionLocaleResolver localeResolver = null;
+	@Autowired
+	private MessageSource messageSource = null;
 
 	// http://localhost:8080/spring-template/en/
 	@RequestMapping("/{locale}/")
@@ -35,5 +38,16 @@ public class MainController {
 		model.addAttribute("firstAttributeName", firstAttributeValue);
 		model.addAttribute("secondAttributeName", secondAttributeValue);
 		return "jsp/modeltest";
+	}
+	
+	// http://localhost:8080/spring-template/en/localised/
+	@RequestMapping("/{locale}/localised/")
+	public String root(@PathVariable String locale, HttpServletRequest request, HttpServletResponse response,
+	                   Model model) {
+		localeResolver.setLocale(request, response, new Locale(locale));
+		model.addAttribute("localisedMessage", messageSource.getMessage("localised.message.text",
+		                                                             		new Object[]{},
+		                                                             		new Locale(locale)));
+		return "jsp/localised";
 	}
 }
