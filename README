@@ -1,42 +1,21 @@
-Spring Templates
-================
+Spring Template : Static Resources
+==================================
 
 o Introduction
-o Running the templates
-o Templates
+o Running the template
 o More info
 
 Introduction
 ------------
-This is a set of small, minimalist Spring web applications, each one
-showing how to do a specific thing in Spring. Each template has just
-the right amount of clutter in its pom.xml to work.
+This is a Spring template that shows how to use static resources
+such as javascript from views
 
-Running the templates
----------------------
-You can see the templates in action by running Jetty:
+Running the template
+--------------------
+You can see the template in action by running Jetty:
 mvn jetty:run
 and pointing your browser to:
 http://localhost:8080/spring-template
-
-Templates
----------
-Each template is held in a git branch:
-
-master - Simple web application with two views. A simple view and one that
-         shows how to display Model attributes in a view.
-with-logging - The master web application but with log4j logging added to the
-               controller.
-with-localisation - The master web application localised using the URL:
-                    http://localhost:8080/spring-template/en/
-                    http://localhost:8080/spring-template/gd/
-                    Contains English (UK) and Scottish Gaelic strings.
-file-upload - The master web application with file upload functionality
-interceptor - The master web application with interceptor functionality
-sso - The master web application with a dummy servlet filter that injects
-      attributes into the request following a dummy login page.
-      This mimics Shibboleth or SAML2 SSO flow
-testing - The master web application with unit and integration tests
 
 More info
 ---------
