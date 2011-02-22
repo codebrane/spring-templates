@@ -18,15 +18,13 @@
 
 	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />
 
-  <bean id="mainController" class="com.codebrane.spring.controller.MainController">
-    <property name="localeResolver"><ref bean="localeResolver" /></property>
-  </bean>
-
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 
 	<!-- Scans within the base package of the application for @Components to configure as beans -->
 	<!-- @Controller, @Service, @Configuration, etc. -->
 	<context:component-scan base-package="com.codebrane.spring.controller" />
+	
+	<context:annotation-config />
 
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<mvc:annotation-driven />
